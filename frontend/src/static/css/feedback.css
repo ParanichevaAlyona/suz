@@ -1,0 +1,121 @@
+.feedback-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 70px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.feedback-modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-color);
+    padding: 2rem;
+    z-index: 1001;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    border-radius: 20px;
+    transition: all 0.05s ease;
+}
+
+.feedback-modal * {
+    transition: all 0.05s ease;
+}
+
+.feedback-modal h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.feedback-modal textarea {
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    color: #212529;;
+    font-family: inherit;
+    resize: vertical;
+    background: #f5f5f5;
+}
+
+.feedback-modal input {
+    color: #212529;;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+}
+
+.feedback-modal .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-modal button {
+    background: var(--success-color);
+    border-radius: 20px;
+    color: var(--text-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.feedback-modal button:hover {
+    background: var(--status-done-color);
+}
+
+.feedback-modal button.cancel {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.feedback-modal button.cancel:hover {
+    background: var(--status-error-background-color);
+}
+
+.feedback-modal .mail-link {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
